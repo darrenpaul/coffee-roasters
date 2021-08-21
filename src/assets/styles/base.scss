@@ -1,0 +1,46 @@
+@import "./colors.scss";
+@import "./space.scss";
+@import "./typography.scss";
+
+$border-radius-size: 12px;
+
+* {
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 0 $space-375;
+  background: $color-100;
+}
+
+button {
+  cursor: pointer;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 18px;
+  color: $color-100;
+  background: $color-400;
+  width: 217px;
+  height: 56px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  &:hover {
+    background: $color-300;
+  }
+}
+
+.inline--group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  margin: $space-200 0;
+}

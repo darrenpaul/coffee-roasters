@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;500;700;900&family=Fraunces:wght@100;300;400;500;700;900&display=swap");
+
+body {
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+  font-family: "Fraunces", serif;
+  color: $color-500;
+}
+
+h1 {
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+.information--text {
+  color: $color-300;
+  margin-bottom: $space-100;
+}

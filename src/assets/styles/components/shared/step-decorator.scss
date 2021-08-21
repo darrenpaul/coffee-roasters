@@ -1,0 +1,24 @@
+$decorator-size: 20px;
+$decorator-line-width: 1px;
+
+.step--decorators {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: $space-200 0;
+
+  .decorator {
+    display: flex;
+    align-items: center;
+    .circle {
+      width: $decorator-size;
+      height: $decorator-size;
+      border-radius: 100%;
+      border: $decorator-line-width solid $color-400;
+    }
+    .line {
+      flex-grow: 1;
+      height: $decorator-line-width;
+      background: $color-200;
+    }
+  }
+}

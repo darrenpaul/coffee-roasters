@@ -1,0 +1,17 @@
+.how-it-works--group {
+  background: $color-500;
+  color: $color-100;
+  h1 {
+    color: $color-200;
+  }
+}
+
+.plan-builder {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+
+  button {
+    margin: $space-200 0;
+    float: right;
+  }
+}

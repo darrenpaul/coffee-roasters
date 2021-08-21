@@ -1,0 +1,16 @@
+.order-summary--container {
+  background: $color-500;
+  padding: $space-300;
+  border-radius: $border-radius-size;
+}
+
+.text {
+  font-family: "Fraunces", serif;
+  font-size: 1.3rem;
+  font-weight: 900;
+  line-height: 34px;
+
+  mark {
+    color: $color-400;
+  }
+}

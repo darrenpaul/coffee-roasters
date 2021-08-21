@@ -1,0 +1,17 @@
+.how-it-works--container {
+  display: grid;
+  color: $color-500;
+
+  h4 {
+    color: $color-300;
+    width: 100%;
+    margin: $space-200 0;
+  }
+  h1 {
+    color: $color-200;
+  }
+
+  button {
+    margin: $space-200 0;
+  }
+}

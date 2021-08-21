@@ -1,0 +1,32 @@
+.modal--container {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modal {
+    z-index: 9999;
+    max-width: 50vw;
+    h3 {
+      background: $color-500;
+      color: $color-100;
+      padding: $space-200 $space-100;
+      padding-left: $space-200;
+      border-top-left-radius: $border-radius-size;
+      border-top-right-radius: $border-radius-size;
+    }
+
+    .content {
+      padding: $space-200;
+      background: $color-100;
+      border-bottom-left-radius: $border-radius-size;
+      border-bottom-right-radius: $border-radius-size;
+    }
+  }
+}

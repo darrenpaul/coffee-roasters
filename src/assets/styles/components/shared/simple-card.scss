@@ -1,0 +1,21 @@
+.simple--cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: $space-200 0;
+
+  .simple--card {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: $space-200;
+    padding-right: 70px;
+
+    h1 {
+      width: 100%;
+    }
+
+    h3 {
+      width: 70%;
+      white-space: pre-line;
+    }
+  }
+}

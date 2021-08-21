@@ -1,0 +1,51 @@
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $color-500;
+  color: $color-100;
+  height: 5rem;
+  padding: 0 $space-375;
+  margin-bottom: $space-375;
+
+  .group {
+    display: flex;
+    align-items: center;
+    .branding--image {
+      margin-right: $space-375;
+    }
+
+    .links {
+      a {
+        font-family: "Barlow", sans-serif;
+        font-weight: 700;
+        font-size: 0.75rem;
+        letter-spacing: 0.0625rem;
+        text-transform: uppercase;
+        color: $color-300;
+        text-decoration: none;
+        width: 0.9375rem;
+        height: 100%;
+        margin: 0 10px;
+        transition: color, 0.3s;
+        &:hover {
+          color: $color-100;
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .social--links {
+    a {
+      transition: color, 0.3s;
+      margin: 0 10px;
+    }
+  }
+}

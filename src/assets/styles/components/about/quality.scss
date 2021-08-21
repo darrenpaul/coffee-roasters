@@ -1,0 +1,35 @@
+.quality {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  grid-gap: $space-375;
+
+  .background {
+    position: absolute;
+    background: $color-500;
+    width: 100%;
+    height: 80%;
+    bottom: 0;
+    border-radius: $border-radius-size;
+  }
+
+  .content {
+    z-index: 2;
+    margin-left: $space-375;
+    color: $color-100;
+    border-radius: $border-radius-size;
+
+    h3 {
+      color: $color-100;
+      margin-bottom: $space-200;
+    }
+  }
+
+  img {
+    z-index: 2;
+    border-radius: $border-radius-size;
+    margin-bottom: $space-375;
+  }
+}
