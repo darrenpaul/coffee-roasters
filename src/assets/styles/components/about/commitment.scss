@@ -3,7 +3,6 @@
   padding: $space-375;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-gap: $space-200;
-  align-items: center;
 
   h3 {
     margin-bottom: $space-200;
@@ -11,5 +10,17 @@
 
   img {
     border-radius: $border-radius-size;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .commitment {
+    padding: $space-375 $space-200;
+    h3 {
+    }
+
+    img {
+      width: 100%;
+    }
   }
 }

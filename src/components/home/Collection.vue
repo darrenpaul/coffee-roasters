@@ -1,13 +1,15 @@
 <template>
-  <div class="collection--container">
-    <h1>our collection</h1>
-    <CollectionCard
-      v-for="(item, index) in collection"
-      :key="index"
-      :imagePath="item.image"
-      :title="item.title"
-      :description="item.description"
-    />
+  <div class="screen-height--container">
+    <div class="collection--container">
+      <h1>our collection</h1>
+      <CollectionCard
+        v-for="(item, index) in collection"
+        :key="index"
+        :imagePath="item.image"
+        :title="item.title"
+        :description="item.description"
+      />
+    </div>
   </div>
 </template>
 

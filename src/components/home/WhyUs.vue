@@ -1,21 +1,23 @@
 <template>
-  <div class="why-us--container">
-    <div class="content--container">
-      <h2>Why choose us?</h2>
-      <p>
-        A large part of our role is choosing which particular coffees will be
-        featured in our range. This means working closely with the best coffee
-        growers to give you a more impactful experience on every level.
-      </p>
-    </div>
-    <div class="why-us--cards">
-      <WhyUsCard
-        v-for="(item, index) in collection"
-        :key="index"
-        :imagePath="item.image"
-        :title="item.title"
-        :description="item.description"
-      />
+  <div class="screen-height--container">
+    <div class="why-us--container">
+      <div class="content--container">
+        <h2>Why choose us?</h2>
+        <p>
+          A large part of our role is choosing which particular coffees will be
+          featured in our range. This means working closely with the best coffee
+          growers to give you a more impactful experience on every level.
+        </p>
+      </div>
+      <div class="why-us--cards">
+        <WhyUsCard
+          v-for="(item, index) in collection"
+          :key="index"
+          :imagePath="item.image"
+          :title="item.title"
+          :description="item.description"
+        />
+      </div>
     </div>
   </div>
 </template>

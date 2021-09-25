@@ -10,7 +10,7 @@
     position: absolute;
     display: flex;
     height: 100%;
-    margin: 0;
+    margin: $space-200 0;
     flex-direction: column;
     justify-content: center;
     background: none;
@@ -20,6 +20,7 @@
     h2 {
       width: 100%;
       background: none;
+      font-size: 72px;
       font-weight: 900;
       color: $color-100;
     }
@@ -30,6 +31,16 @@
       color: $color-100;
       margin: 0;
       padding: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero--container {
+    .inner--content {
+      h2 {
+        font-size: 32px;
+      }
     }
   }
 }

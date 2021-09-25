@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <Hero
+      :containerHeight="'600px'"
       :backgroundImage="hero.backgroundImage"
       :title="hero.title"
       :description="hero.description"

@@ -1,22 +1,24 @@
 <template>
-  <div class="how-it-works--container">
-    <div class="content--container">
-      <h4>How it works</h4>
+  <div class="screen-height--container">
+    <div class="how-it-works--container">
+      <div class="content--container">
+        <h4>How it works</h4>
+      </div>
+
+      <StepDecorator />
+
+      <div class="simple--cards">
+        <SimpleCard
+          v-for="(item, index) in collection"
+          :key="index"
+          :title="item.title"
+          :description="item.description"
+          ><h1>{{ `0${index + 1}` }}</h1></SimpleCard
+        >
+      </div>
+
+      <button>Create your plan</button>
     </div>
-
-    <StepDecorator />
-
-    <div class="simple--cards">
-      <SimpleCard
-        v-for="(item, index) in collection"
-        :key="index"
-        :title="item.title"
-        :description="item.description"
-        ><h1>{{ `0${index + 1}` }}</h1></SimpleCard
-      >
-    </div>
-
-    <button>Create your plan</button>
   </div>
 </template>
 

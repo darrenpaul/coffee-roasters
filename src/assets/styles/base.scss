@@ -18,6 +18,8 @@ div {
 section {
   padding: 0 $space-375;
   background: $color-100;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 button {
@@ -36,6 +38,15 @@ button {
   &:hover {
     background: $color-300;
   }
+}
+
+.screen-height--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  height: auto;
+  margin: $space-200 0;
 }
 
 .inline--group {

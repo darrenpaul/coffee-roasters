@@ -49,3 +49,24 @@ footer {
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    gap: $space-200;
+    padding: $space-200;
+    .group {
+      gap: $space-100;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      .branding--image {
+        margin: 0 auto;
+      }
+    }
+  }
+}
