@@ -13,11 +13,19 @@
           :key="index"
           :title="item.title"
           :description="item.description"
-          ><h1>{{ `0${index + 1}` }}</h1></SimpleCard
         >
+          <template v-slot:subject>
+            <h1>{{ `0${index + 1}` }}</h1>
+          </template>
+          <template v-slot:title>
+            <h3>{{ item.title }}</h3>
+          </template>
+        </SimpleCard>
       </div>
 
-      <button>Create your plan</button>
+      <div class="button--container">
+        <button>Create your plan</button>
+      </div>
     </div>
   </div>
 </template>

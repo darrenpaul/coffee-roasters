@@ -1,6 +1,6 @@
 <template>
   <div class="commitment">
-    <img src="~@/assets/images/image-commitment.jpg" alt="commitment" />
+    <img :src="platformImage" alt="commitment" />
 
     <div class="content">
       <h3>Our commitment</h3>
@@ -24,6 +24,21 @@
 <script>
 export default {
   name: "Commitment",
+
+  computed: {
+    screenWidth() {
+      return this.$store.getters["settings/GET_SCREEN_WIDTH"];
+    },
+
+    platformImage() {
+      if (this.screenWidth <= 375) {
+        return require("@/assets/images/about/mobile/image-commitment.jpg");
+      } else if (this.screenWidth <= 768) {
+        return require("@/assets/images/about/tablet/image-commitment.jpg");
+      }
+      return require("@/assets/images/about/desktop/image-commitment.jpg");
+    },
+  },
 };
 </script>
 

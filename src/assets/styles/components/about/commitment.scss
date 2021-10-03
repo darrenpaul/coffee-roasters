@@ -1,26 +1,36 @@
 .commitment {
-  display: grid;
-  padding: $space-375;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  grid-gap: $space-200;
-
-  h3 {
-    margin-bottom: $space-200;
-  }
+  @apply flex gap-12 items-center mx-8;
 
   img {
-    border-radius: $border-radius-size;
+    @apply rounded;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .commitment {
-    padding: $space-375 $space-200;
-    h3 {
+    @apply flex gap-12 items-center mx-0;
+
+    img {
+      @apply rounded;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .commitment {
+    @apply flex flex-col gap-12 items-center mx-0;
+
+    .content {
+      @apply flex flex-col gap-8;
+
+      h3,
+      p {
+        @apply text-center;
+      }
     }
 
     img {
-      width: 100%;
+      @apply rounded;
     }
   }
 }

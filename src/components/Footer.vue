@@ -1,9 +1,9 @@
 <template>
   <footer>
     <div class="group">
-      <div class="branding--image">
+      <div class="branding">
         <a href="/">
-          <img src="@/assets/images/logo-footer.svg" alt="" />
+          <img src="@/assets/images/shared/desktop/logo-footer.svg" alt="" />
         </a>
       </div>
 
@@ -16,13 +16,19 @@
 
     <div class="social--links">
       <a href=""
-        ><img src="@/assets/images/social/icon-facebook.svg" alt="facebook"
+        ><img
+          src="@/assets/images/shared/desktop/icon-facebook.svg"
+          alt="facebook"
       /></a>
       <a href=""
-        ><img src="@/assets/images/social/icon-twitter.svg" alt="twitter"
+        ><img
+          src="@/assets/images/shared/desktop/icon-twitter.svg"
+          alt="twitter"
       /></a>
       <a href=""
-        ><img src="@/assets/images/social/icon-instagram.svg" alt="instagram"
+        ><img
+          src="@/assets/images/shared/desktop/icon-instagram.svg"
+          alt="instagram"
       /></a>
     </div>
   </footer>

@@ -1,45 +1,32 @@
 .hero--container {
-  display: block;
-  position: relative;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  @apply block relative bg-center bg-no-repeat bg-cover rounded;
 
   .inner--content {
-    position: absolute;
-    display: flex;
-    height: 100%;
-    margin: $space-200 0;
-    flex-direction: column;
-    justify-content: center;
-    background: none;
-    gap: 30px;
-    padding-left: 60px;
+    @apply absolute flex flex-col justify-center h-full p-12 gap-8;
 
     h2 {
-      width: 100%;
-      background: none;
-      font-size: 72px;
-      font-weight: 900;
-      color: $color-100;
+      @apply text-6xl font-bold text-app-orange-100;
     }
 
     p {
-      width: 445px;
-      background: none;
-      color: $color-100;
-      margin: 0;
-      padding: 0;
+      @apply w-8/12 text-app-orange-100;
     }
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 375px) {
   .hero--container {
+    @apply block relative bg-center bg-no-repeat bg-cover;
+
     .inner--content {
+      @apply absolute flex flex-col items-center justify-center h-full p-4 gap-8;
+
       h2 {
-        font-size: 32px;
+        @apply text-4xl font-bold text-app-orange-100;
+      }
+
+      p {
+        @apply w-full text-app-orange-100 text-center;
       }
     }
   }

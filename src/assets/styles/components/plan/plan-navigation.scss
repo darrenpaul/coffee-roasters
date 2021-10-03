@@ -1,18 +1,11 @@
 .plan--navigation {
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  @apply relative flex flex-col font-fraunces font-bold text-xl;
 
   button {
-    background: none;
-    color: $color-300;
-    text-align: left;
-    border-bottom: solid 1px;
-    border-radius: 0;
-    width: 180px;
+    @apply border-b-2 border-solid border-app-blue-300 text-left text-app-blue-300 w-44 py-4;
 
     &:last-child {
-      border: none;
+      @apply border-none;
     }
   }
 }

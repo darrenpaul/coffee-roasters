@@ -1,35 +1,57 @@
 .quality {
-  display: grid;
-  position: relative;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  justify-content: space-between;
-  grid-gap: $space-375;
-
-  .background {
-    position: absolute;
-    background: $color-500;
-    width: 100%;
-    height: 80%;
-    bottom: 0;
-    border-radius: $border-radius-size;
-  }
+  @apply flex flex-row-reverse relative;
 
   .content {
-    z-index: 2;
-    margin-left: $space-375;
-    color: $color-100;
-    border-radius: $border-radius-size;
+    @apply bg-app-blue-500 flex flex-row p-12 w-1/2 left-0 bottom-0 rounded absolute;
 
     h3 {
-      color: $color-100;
-      margin-bottom: $space-200;
+      @apply text-app-orange-100 text-center;
+    }
+
+    p {
+      @apply text-app-orange-100 text-center;
     }
   }
 
-  img {
-    z-index: 2;
-    border-radius: $border-radius-size;
-    margin-bottom: $space-375;
+  .inner-cover {
+    @apply flex flex-col static pb-8;
+
+    .background {
+      @apply bg-app-blue-500 w-full p-12 h-5/6 left-0 bottom-0 rounded absolute;
+    }
+
+    img {
+      @apply rounded mx-8 z-10;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .quality {
+    @apply flex flex-col relative;
+
+    .content {
+      @apply bg-app-blue-500 flex flex-row p-8 w-full rounded-none rounded-b static;
+
+      h3 {
+        @apply text-app-orange-100 text-center;
+      }
+
+      p {
+        @apply text-app-orange-100 text-center;
+      }
+    }
+
+    .inner-cover {
+      @apply flex flex-col relative pb-0;
+
+      .background {
+        @apply bg-app-blue-500 w-full p-8 h-4/6 left-0 -bottom-px rounded-none rounded-t block;
+      }
+
+      img {
+        @apply rounded mx-8 z-10;
+      }
+    }
   }
 }

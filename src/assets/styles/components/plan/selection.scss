@@ -1,44 +1,62 @@
 .selection--container {
-  margin-bottom: $space-300;
+  @apply pb-12;
 
   .heading--container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
+    @apply flex items-center justify-between cursor-pointer;
 
     h3 {
+      @apply cursor-pointer;
       cursor: pointer;
-      margin-bottom: $space-200;
     }
   }
 
   .cards--container {
-    display: none;
-    overflow: hidden;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: $space-200;
-    cursor: pointer;
+    @apply hidden overflow-hidden grid grid-cols-3 gap-4 cursor-pointer;
 
     .card {
-      background: $color-150;
-      padding: $space-200;
-      border-radius: $border-radius-size;
+      @apply bg-app-yellow-150 p-12 rounded;
 
       h4 {
-        margin-bottom: $space-200;
       }
 
       &:hover {
-        background: $color-200;
+        @apply bg-app-yellow-200;
       }
     }
 
     .active {
-      background: $color-300;
+      @apply bg-app-blue-300;
+    }
+  }
+}
 
-      * {
-        color: $color-100;
+@media only screen and (max-width: 375px) {
+  .selection--container {
+    .heading--container {
+      @apply flex items-center justify-between cursor-pointer;
+
+      h3 {
+        @apply cursor-pointer;
+        cursor: pointer;
+      }
+    }
+
+    .cards--container {
+      @apply hidden overflow-hidden flex flex-col gap-4 cursor-pointer;
+
+      .card {
+        @apply bg-app-yellow-150 p-12 rounded;
+
+        h4 {
+        }
+
+        &:hover {
+          @apply bg-app-yellow-200;
+        }
+      }
+
+      .active {
+        @apply bg-app-blue-300;
       }
     }
   }

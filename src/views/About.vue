@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="flex flex-col gap-12">
     <Hero
       :backgroundImage="hero.backgroundImage"
       :containerHeight="hero.containerHeight"
@@ -31,7 +31,7 @@ export default {
   data() {
     return {
       hero: {
-        backgroundImage: require("@/assets/images/image-hero-whitecup.jpg"),
+        backgroundImage: require("@/assets/images/about/desktop/image-hero-whitecup.jpg"),
         containerHeight: "400px",
         title: "About Us",
         description:

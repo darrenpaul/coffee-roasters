@@ -1,105 +1,83 @@
 .collection--container {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
+  @apply relative flex p-12 gap-8;
 
   h1 {
-    left: 0;
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    background: none;
-    color: $color-300;
-    font-size: (40px, 96px, 140px);
-    background: linear-gradient(
-      180deg,
-      rgba(183, 190, 200, 1) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    z-index: 2;
+    @apply absolute w-full text-center text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-app-blue-300 to-transparent top-0;
+  }
+}
+
+.collection-card {
+  @apply flex flex-col gap-4 z-10;
+
+  img {
+    @apply w-full h-40;
   }
 
-  .collection-card {
-    display: grid;
-    grid-template-rows: 1fr 0.2fr 0.2fr;
-    z-index: 3;
-    background: none;
-    margin-top: 100px;
-    color: $color-500;
+  h4 {
+    @apply flex-initial text-center font-bold;
+  }
 
-    h4 {
-      text-align: center;
-      width: 100%;
-      margin: 20px 0;
-    }
-
-    p {
-      text-align: center;
-      width: 100%;
-    }
-
-    img {
-      width: 100%;
-      height: 100%;
-      background: none;
-    }
+  p {
+    @apply text-center;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .collection--container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    @apply relative flex flex-col p-12 gap-8;
 
     h1 {
-      left: 0;
-      position: absolute;
-      width: 100%;
-      text-align: center;
-      background: none;
-      color: $color-300;
+      @apply absolute w-full text-center text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-app-blue-300 to-transparent top-0 left-0;
+    }
+  }
 
-      background: linear-gradient(
-        180deg,
-        rgba(183, 190, 200, 1) 0%,
-        rgba(255, 255, 255, 0) 100%
-      );
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      z-index: 2;
+  .collection-card {
+    @apply flex flex-row gap-4 z-10;
+
+    img {
+      @apply w-full h-56;
     }
 
-    .collection-card {
-      display: grid;
-      grid-template-rows: 1fr 0.2fr 0.2fr;
-      z-index: 3;
-      background: none;
-      margin-top: 100px;
-      color: $color-500;
+    .group {
+      @apply flex flex-col gap-4 justify-center;
+    }
 
-      h4 {
-        text-align: center;
-        width: 100%;
-        margin: 20px 0;
-      }
+    h4 {
+      @apply flex-initial text-left font-bold;
+    }
 
-      p {
-        text-align: center;
-        width: 100%;
-      }
+    p {
+      @apply text-left;
+    }
+  }
+}
 
-      img {
-        width: 100%;
-        height: 100%;
-        background: none;
-      }
+@media only screen and (max-width: 375px) {
+  .collection--container {
+    @apply relative flex flex-col p-12 gap-8;
+
+    h1 {
+      @apply block w-full text-center text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-app-blue-300 to-transparent;
+    }
+  }
+
+  .collection-card {
+    @apply flex flex-col gap-4 z-10;
+
+    img {
+      @apply w-full h-56;
+    }
+
+    .group {
+      @apply flex flex-col gap-4 justify-center;
+    }
+
+    h4 {
+      @apply flex-initial text-center font-bold;
+    }
+
+    p {
+      @apply text-center;
     }
   }
 }

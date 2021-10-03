@@ -1,16 +1,11 @@
 .order-summary--container {
-  background: $color-500;
-  padding: $space-300;
-  border-radius: $border-radius-size;
+  @apply bg-app-blue-500 p-12 rounded;
 }
 
 .text {
-  font-family: "Fraunces", serif;
-  font-size: 1.3rem;
-  font-weight: 900;
-  line-height: 34px;
+  @apply font-fraunces text-xl font-bold;
 
   mark {
-    color: $color-400;
+    @apply text-app-green-400 bg-transparent;
   }
 }

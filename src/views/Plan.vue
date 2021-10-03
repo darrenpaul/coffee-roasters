@@ -1,7 +1,7 @@
 <template>
-  <div class="plan">
+  <div class="flex flex-col gap-12">
     <Hero
-      :backgroundImage="hero.backgroundImage"
+      :backgroundImage="platformImage"
       :containerHeight="hero.containerHeight"
       :borderRadius="0"
       :title="hero.title"
@@ -17,13 +17,20 @@
           :key="index"
           :title="item.title"
           :description="item.description"
-          ><h1>{{ `0${index + 1}` }}</h1></SimpleCard
+          :textColor="'light'"
         >
+          <template v-slot:subject>
+            <h1>{{ `0${index + 1}` }}</h1>
+          </template>
+          <template v-slot:title>
+            <h3>{{ item.title }}</h3>
+          </template>
+        </SimpleCard>
       </div>
     </div>
 
     <div class="plan-builder">
-      <PlanNavigation />
+      <PlanNavigation v-if="screenWidth > 768" />
       <div class="selections">
         <Selection
           v-for="(item, index) in selections"
@@ -35,7 +42,9 @@
           v-on:option-selected="(index) => item.callback(index)"
         />
         <OrderSummary />
-        <button @click="toggleModal">Create plan!</button>
+        <div class="center-container">
+          <button class="plan-button" @click="toggleModal">Create plan!</button>
+        </div>
       </div>
     </div>
 
@@ -90,7 +99,6 @@ export default {
       modalShow: false,
 
       hero: {
-        backgroundImage: require("@/assets/images/image-hero-blackcup.jpg"),
         containerHeight: "400px",
         title: "Create plan",
         description:
@@ -278,6 +286,21 @@ export default {
 
     getDelivery() {
       return this.$store.getters["delivery/GET"];
+    },
+  },
+
+  computed: {
+    screenWidth() {
+      return this.$store.getters["settings/GET_SCREEN_WIDTH"];
+    },
+
+    platformImage() {
+      if (this.screenWidth <= 375) {
+        return require("@/assets/images/plan/desktop/image-hero-blackcup.jpg");
+      } else if (this.screenWidth <= 768) {
+        return require("@/assets/images/plan/desktop/image-hero-blackcup.jpg");
+      }
+      return require("@/assets/images/plan/desktop/image-hero-blackcup.jpg");
     },
   },
 };

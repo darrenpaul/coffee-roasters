@@ -13,6 +13,13 @@ import Footer from "@/components/Footer.vue";
 export default {
   name: "CoffeeRoasters",
 
+  mounted() {
+    window.onresize = () => {
+      this.windowWidth = window.innerWidth;
+      this.$store.dispatch("settings/SET_SCREEN_WIDTH", this.windowWidth);
+    };
+  },
+
   components: { Navigation, Footer },
 };
 </script>

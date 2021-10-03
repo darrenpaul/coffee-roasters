@@ -11,7 +11,7 @@
 
     <div
       class="cards--container"
-      :style="{ display: `${isOpen ? 'grid' : 'none'}` }"
+      :style="{ display: `${isOpen ? 'flex' : 'none'}` }"
     >
       <div
         v-for="(item, index) in items"

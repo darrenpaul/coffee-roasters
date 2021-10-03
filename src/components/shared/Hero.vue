@@ -4,7 +4,6 @@
     :style="{
       height: `${containerHeight}`,
       'background-image': `url(${backgroundImage})`,
-      borderRadius: `${borderRadius}px`,
     }"
   >
     <div class="inner--content">

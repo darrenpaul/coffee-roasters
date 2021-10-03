@@ -1,17 +1,30 @@
 .how-it-works--group {
-  background: $color-500;
-  color: $color-100;
+  @apply bg-app-blue-500 rounded text-app-orange-100;
+
   h1 {
-    color: $color-200;
+    @apply font-bold text-app-yellow-200;
+  }
+
+  h3 {
+    @apply font-bold text-app-orange-100;
   }
 }
 
-.plan-builder {
-  display: grid;
-  grid-template-columns: 0.5fr 1fr;
+.plan-button {
+  @apply bg-app-green-400 text-app-orange-100 px-8 py-4 rounded font-fraunces font-bold mt-8 float-right;
+}
 
-  button {
-    margin: $space-200 0;
-    float: right;
+.plan-builder {
+  @apply flex gap-8;
+  // display: grid;
+  // grid-template-columns: 0.5fr 1fr;
+}
+
+@media only screen and (max-width: 375px) {
+  .center-container {
+    @apply flex items-center justify-center;
+    .plan-button {
+      @apply bg-app-green-400 text-app-orange-100 px-8 py-4 rounded font-fraunces font-bold mt-8 float-none;
+    }
   }
 }

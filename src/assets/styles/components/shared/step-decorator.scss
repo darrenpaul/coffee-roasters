@@ -1,24 +1,21 @@
-$decorator-size: 20px;
-$decorator-line-width: 1px;
-
 .step--decorators {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: $space-200 0;
+  @apply grid py-8 grid-cols-3 p-8;
 
   .decorator {
-    display: flex;
-    align-items: center;
+    @apply flex items-center;
+
     .circle {
-      width: $decorator-size;
-      height: $decorator-size;
-      border-radius: 100%;
-      border: $decorator-line-width solid $color-400;
+      @apply w-5 h-5 rounded-full border-solid border-2 border-app-green-400;
     }
+
     .line {
-      flex-grow: 1;
-      height: $decorator-line-width;
-      background: $color-200;
+      @apply flex-grow h-0.5 bg-app-yellow-200;
     }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .step--decorators {
+    @apply hidden;
   }
 }

@@ -1,21 +1,17 @@
 .simple--cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: $space-200 0;
+  @apply grid grid-cols-3 gap-12 p-8;
 
   .simple--card {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: $space-200;
-    padding-right: 70px;
+    @apply flex flex-col gap-8;
+  }
+}
 
-    h1 {
-      width: 100%;
-    }
+@media only screen and (max-width: 375px) {
+  .simple--cards {
+    @apply flex flex-col gap-8;
 
-    h3 {
-      width: 70%;
-      white-space: pre-line;
+    .simple--card {
+      @apply grid grid-rows-3 gap-8;
     }
   }
 }

@@ -6,9 +6,14 @@ import store from "./store";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronDown,
+  faChevronUp,
+  faBars,
+} from "@fortawesome/free-solid-svg-icons";
+import "./assets/tailwind.css";
 
-library.add(faChevronUp, faChevronDown);
+library.add(faChevronUp, faChevronDown, faBars);
 
 createApp(App)
   .use(store)

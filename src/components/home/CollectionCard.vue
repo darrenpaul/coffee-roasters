@@ -1,8 +1,10 @@
 <template>
   <div class="collection-card">
     <img :src="require(`@/assets/images/${imagePath}`)" :alt="imageAlt" />
-    <h4>{{ title }}</h4>
-    <p>{{ description }}</p>
+    <div class="group">
+      <h4>{{ title }}</h4>
+      <p>{{ description }}</p>
+    </div>
   </div>
 </template>
 

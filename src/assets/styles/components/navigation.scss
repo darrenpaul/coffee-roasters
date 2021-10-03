@@ -1,37 +1,69 @@
-.desktop--navigation {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 5rem;
+.navigation {
+  @apply flex items-center justify-between h-20;
 
-  .branding--image {
+  .branding {
     img {
-      height: 1.625rem;
+      @apply h-6;
     }
   }
 
-  a {
-    font-family: "Barlow", sans-serif;
-    font-weight: 700;
-    font-size: 0.75rem;
-    letter-spacing: 0.0625rem;
-    text-transform: uppercase;
-    color: $color-300;
-    text-decoration: none;
-    width: 0.9375rem;
-    height: 100%;
+  .toggle {
+    @apply hidden;
   }
 
   .links {
+    @apply flex gap-8;
     a {
-      margin: 0 $space-100;
+      @apply font-bold text-xs tracking-wider uppercase no-underline h-full text-app-blue-300;
+    }
+  }
+}
 
-      &:first-child {
-        margin-left: 0;
+@media only screen and (max-width: 768px) {
+  .navigation {
+    @apply flex items-center justify-between h-20;
+
+    .branding {
+      img {
+        @apply h-6;
       }
-      &:last-child {
-        margin-right: 0;
+    }
+
+    .toggle {
+      @apply hidden;
+    }
+
+    .links {
+      @apply flex gap-6;
+      a {
+        @apply font-bold text-xs tracking-wider uppercase no-underline h-full text-app-blue-300;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .navigation {
+    @apply flex items-center justify-between h-20;
+
+    .branding {
+      img {
+        @apply h-3;
+      }
+    }
+
+    .toggle {
+      @apply block;
+    }
+
+    .links {
+      @apply hidden;
+    }
+
+    .mobile--menu {
+      @apply fixed flex flex-col my-auto top-20 bg-gradient-to-b from-app-orange-100 to-transparent w-full z-50 top-0 left-0 h-full overflow-y-auto items-center gap-8;
+      a {
+        @apply font-fraunces font-bold text-base uppercase no-underline text-app-blue-500;
       }
     }
   }

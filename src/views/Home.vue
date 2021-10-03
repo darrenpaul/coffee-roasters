@@ -1,15 +1,31 @@
 <template>
-  <div class="home">
+  <div class="flex flex-col gap-12">
     <Hero
       :containerHeight="'600px'"
-      :backgroundImage="hero.backgroundImage"
+      :backgroundImage="platformImage"
       :title="hero.title"
       :description="hero.description"
     >
-      <button>Create your plan</button>
+      <div class="block">
+        <button
+          class="
+            bg-app-green-400
+            text-app-orange-100
+            px-8
+            py-4
+            rounded
+            font-fraunces font-bold
+          "
+        >
+          Create your plan
+        </button>
+      </div>
     </Hero>
+
     <Collection />
+
     <WhyUs />
+
     <HowItWorks />
   </div>
 </template>
@@ -29,12 +45,26 @@ export default {
   data() {
     return {
       hero: {
-        backgroundImage: require("@/assets/images/image-hero-coffeepress.jpg"),
         title: "Great coffee<br />made simple.",
         description:
           "Start your mornings with the world’s best coffees. Try our expertly curated artisan coffees from our best roasters<br />delivered directly to your door, at your schedule.",
       },
     };
+  },
+
+  computed: {
+    screenWidth() {
+      return this.$store.getters["settings/GET_SCREEN_WIDTH"];
+    },
+
+    platformImage() {
+      if (this.screenWidth <= 375) {
+        return require("@/assets/images/home/mobile/image-hero-coffeepress.jpg");
+      } else if (this.screenWidth <= 768) {
+        return require("@/assets/images/home/tablet/image-hero-coffeepress.jpg");
+      }
+      return require("@/assets/images/home/desktop/image-hero-coffeepress.jpg");
+    },
   },
 };
 </script>

@@ -1,7 +1,7 @@
 <template>
-  <div class="simeple--card">
-    <slot></slot>
-    <h3>{{ title }}</h3>
+  <div class="simple--card">
+    <slot name="subject"></slot>
+    <slot name="title"></slot>
     <p v-html="description"></p>
   </div>
 </template>
@@ -11,8 +11,8 @@ export default {
   name: "SimpleCard",
 
   props: {
-    title: { type: String },
     description: { type: String },
+    textColor: { type: String },
   },
 };
 </script>

@@ -24,25 +24,25 @@ export default {
     return {
       collection: [
         {
-          image: "collection/image-gran-espresso.png",
+          image: "home/desktop/image-gran-espresso.png",
           title: "Gran Espresso",
           description:
             "Light and flavorful blend with cocoa and black pepper for an intense experience.",
         },
         {
-          image: "collection/image-planalto.png",
+          image: "home/desktop/image-planalto.png",
           title: "Planalto",
           description:
             "Brazilian dark roast with rich and velvety body, and hints of fruits and nuts.",
         },
         {
-          image: "collection/image-piccollo.png",
+          image: "home/desktop/image-piccollo.png",
           title: "Piccollo",
           description:
             "Mild and smooth blend featuring notes of toasted almond and dried cherry.",
         },
         {
-          image: "collection/image-danche.png",
+          image: "home/desktop/image-danche.png",
           title: "Danche",
           description:
             "Ethiopian hand-harvested blend densely packed with vibrant fruit notes.",
