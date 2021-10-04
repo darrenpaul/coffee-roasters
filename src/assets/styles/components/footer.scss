@@ -44,7 +44,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 411px) {
+@media only screen and (max-width: 535px) {
   footer {
     @apply flex flex-col items-center justify-between bg-app-blue-500 h-auto py-12 mb-20 gap-8;
 

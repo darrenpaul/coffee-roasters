@@ -8,7 +8,15 @@
     >
       <div class="block">
         <button
-          class="px-8 py-4 font-bold rounded  bg-app-green-400 text-app-orange-100 font-fraunces"
+          class="
+            px-8
+            py-4
+            font-bold
+            rounded
+            bg-app-green-400
+            text-app-orange-100
+            font-fraunces
+          "
         >
           Create your plan
         </button>
@@ -51,7 +59,7 @@ export default {
     },
 
     platformImage() {
-      if (this.screenWidth <= 411) {
+      if (this.screenWidth <= 535) {
         return require("@/assets/images/home/mobile/image-hero-coffeepress.jpg");
       } else if (this.screenWidth <= 768) {
         return require("@/assets/images/home/tablet/image-hero-coffeepress.jpg");

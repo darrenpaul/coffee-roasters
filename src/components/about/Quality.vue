@@ -31,7 +31,7 @@ export default {
     },
 
     platformImage() {
-      if (this.screenWidth <= 411) {
+      if (this.screenWidth <= 535) {
         return require("@/assets/images/about/mobile/image-quality.jpg");
       } else if (this.screenWidth <= 768) {
         return require("@/assets/images/about/tablet/image-quality.jpg");
