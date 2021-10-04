@@ -41,7 +41,7 @@ export default {
     },
 
     linksClass() {
-      if (this.screenWidth <= 411 && this.mobileMenuOpen === true) {
+      if (this.screenWidth <= 535 && this.mobileMenuOpen === true) {
         return "mobile--menu";
       }
       return "links";
