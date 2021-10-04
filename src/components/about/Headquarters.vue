@@ -10,8 +10,11 @@
         :key="index"
         :title="item.title"
         :description="item.description"
-        ><img :src="item.image" alt="country"
-      /></SimpleCard>
+      >
+        <template v-slot:subject>
+          <img class="w-16 h-16" :src="item.image" alt="country"
+        /></template>
+      </SimpleCard>
     </div>
   </div>
 </template>

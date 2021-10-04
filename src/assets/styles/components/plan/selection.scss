@@ -20,12 +20,18 @@
       }
 
       &:hover {
-        @apply bg-app-yellow-200;
+        @apply bg-app-yellow-200 text-app-blue-500;
+        h4 {
+          @apply text-app-blue-500;
+        }
       }
     }
 
     .active {
-      @apply bg-app-blue-300;
+      @apply bg-app-blue-300 text-app-orange-100;
+      h4 {
+        @apply text-app-orange-100;
+      }
     }
   }
 }

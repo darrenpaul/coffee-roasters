@@ -30,3 +30,27 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .modal--container {
+    .modal {
+      z-index: 9999;
+      max-width: 90%;
+      h3 {
+        background: $color-500;
+        color: $color-100;
+        padding: $space-200 $space-100;
+        padding-left: $space-200;
+        border-top-left-radius: $border-radius-size;
+        border-top-right-radius: $border-radius-size;
+      }
+
+      .content {
+        padding: $space-200;
+        background: $color-100;
+        border-bottom-left-radius: $border-radius-size;
+        border-bottom-right-radius: $border-radius-size;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-12">
+  <div class="flex flex-col gap-32">
     <Hero
       :containerHeight="'600px'"
       :backgroundImage="platformImage"
@@ -8,14 +8,7 @@
     >
       <div class="block">
         <button
-          class="
-            bg-app-green-400
-            text-app-orange-100
-            px-8
-            py-4
-            rounded
-            font-fraunces font-bold
-          "
+          class="px-8 py-4 font-bold rounded  bg-app-green-400 text-app-orange-100 font-fraunces"
         >
           Create your plan
         </button>

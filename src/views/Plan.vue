@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-12">
+  <div class="flex flex-col gap-32">
     <Hero
       :backgroundImage="platformImage"
       :containerHeight="hero.containerHeight"
