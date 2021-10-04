@@ -295,7 +295,7 @@ export default {
     },
 
     platformImage() {
-      if (this.screenWidth <= 375) {
+      if (this.screenWidth <= 411) {
         return require("@/assets/images/plan/desktop/image-hero-blackcup.jpg");
       } else if (this.screenWidth <= 768) {
         return require("@/assets/images/plan/desktop/image-hero-blackcup.jpg");

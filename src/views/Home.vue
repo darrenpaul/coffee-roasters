@@ -51,7 +51,7 @@ export default {
     },
 
     platformImage() {
-      if (this.screenWidth <= 375) {
+      if (this.screenWidth <= 411) {
         return require("@/assets/images/home/mobile/image-hero-coffeepress.jpg");
       } else if (this.screenWidth <= 768) {
         return require("@/assets/images/home/tablet/image-hero-coffeepress.jpg");
